@@ -1,0 +1,114 @@
+<!DOCTIYE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale-1">
+        <title>Plantillas NaturaLista</title>
+        <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">-->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+        <link href="css/estilos.css" type="text/css" rel="stylesheet">
+
+
+    </head>
+    <body>
+        <div id="inicio">
+            <div id="titulo">
+                <h1>Plantillas</h1>
+            </div>
+            <div id="logo">
+                <img src="images/Naturalista.png">
+            </div>
+        </div>
+        <div id="foto">
+            <div class="cuadrado">Foto</div>
+        </div>
+        <div>
+            <form action="/action_page.php">
+                <label for="estado">Estado</label>
+                <input type="text" maxlength="25" id="estado" name="estado" placeholder="Nombre del estado...">
+                <label for="descripcion">Descripción</label>
+                <input type="text" id="descripcion" name="descripcion" placeholder="Descripción del estado...">
+                <label for="numobservaciones">Número de observaciones</label>
+                <input type="text" maxlength="21" id="numobservaciones" name="numerodeobservaciones" placeholder="50,000 observaciones...">
+                <label for="numespecies">Número de especies</label>
+                <input type="text" maxlength="16" id="numespecies" name="numerodeespecies" placeholder="5,000 especies...">
+            </form>
+        </div>
+
+        <div id="draggable" class="ui-widget-content">
+  <p>Drag me to my target</p>
+</div>
+
+<div id="droppable" class="ui-widget-header">
+  <p>Drop here</p>
+</div>
+
+
+
+    </body>
+
+
+
+
+
+
+
+
+
+
+
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+    <script
+  src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+  integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+  crossorigin="anonymous"></script>
+
+    <script>
+  $( function() {
+    $( "#draggable" ).draggable();
+    $( "#droppable" ).droppable({
+      drop: function( event, ui ) {
+        $( this )
+          .addClass( "ui-state-highlight" )
+          .find( "p" )
+            .html( "Dropped!" );
+      }
+    });
+  } );
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>

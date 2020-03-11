@@ -1,0 +1,48 @@
+/*div{border: 0.1px solid black}*/
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+h1 {
+    margin:0 auto;
+    font-size: 3.6em;
+    font-weight: bolder;
+    color: black;
+}
+
+#inicio{
+    margin: 0 auto;
+    width: 100%;
+    height: 11em;
+}
+#titulo{
+    float: left;
+    margin-left: 4em;
+    margin-top: 3em;
+
+}
+#logo{
+    float: right;
+    margin-right: 4em;
+}
+#foto{
+    margin: 0 auto;
+    width: 100%
+}
+.cuadrado{
+    margin: auto;
+    margin-top: 4em;
+    margin-bottom: 4em;
+    width: 900px;
+    height: 628px;
+    text-align: center;
+    border: solid 0.2em blue;
+}
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
