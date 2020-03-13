@@ -11,6 +11,7 @@
 
     </head>
     <body>
+
         <div id="inicio">
             <div id="titulo">
                 <h1>Plantillas</h1>
@@ -19,9 +20,15 @@
                 <img src="images/Naturalista.png">
             </div>
         </div>
+
         <div id="foto">
-            <div class="cuadrado">Foto</div>
+            <input type="file" name="inpFile" id="inpFile">
+            <div class="image-preview" id="imagePreview">
+            <img src="" alt="Image Preview" class="image-preview__image">
+            <span class="image-preview__default-text">Imágen Previa</span>
+            </div>
         </div>
+
         <div>
             <form action="/action_page.php">
                 <label for="estado">Estado</label>
@@ -44,7 +51,35 @@
 </div>
 
 
+        <script>
+            const inpFile = document.getElementById("inpFile");
+            const previewContainer = document.getElementById("imagePreview");
+            const previewImage = previewContainer.querySelector(".image-preview__image");
+            const previewDefaultText = previewContainer.querySelector(".image-preview__default-text");
 
+            inpFile.addEventListener("change", function() {
+                const file = this.files[0];
+
+
+                if (file) {
+                    const reader = new FileReader();
+
+                    previewDefaultText.style.display = "none";
+                    previewImage.style.display = "block";
+
+                    reader.addEventListener("load", function() {
+                        previewImage.setAttribute("src", this.result);
+                    });
+
+                    reader.readAsDataURL(file);
+                } else{
+                     previewDefaultText.style.display = null;
+                    previewImage.style.display = null;
+                    previewImage.setAttribute("src", "");
+                }
+
+            });
+        </script>
     </body>
 
 

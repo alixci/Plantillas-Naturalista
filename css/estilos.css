@@ -28,14 +28,30 @@ h1 {
     margin: 0 auto;
     width: 100%
 }
-.cuadrado{
+.image-preview {
+    width: 900px;
+    height: 628px;
+    border: 2px solid black;
     margin: auto;
     margin-top: 4em;
     margin-bottom: 4em;
-    width: 900px;
-    height: 628px;
-    text-align: center;
-    border: solid 0.2em blue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: black;
+}
+.image-preview__image{
+    display: none;
+    width: 100%;
+}
+input[type=file], select{
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
 }
 input[type=text], select {
   width: 100%;
