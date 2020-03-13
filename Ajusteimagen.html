@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <style>
+           .doc{
+  display: flex;
+  flex-flow: column wrap;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background: #333944;
+}
+.box{
+  width: 300px;
+  height: 300px;
+  background: #CCC;
+  overflow: hidden;
+}
+.btn{
+  border: none;
+  margin-top: 1.5em;
+  padding: 0.75em 1.5em;
+  border-radius: 3px;
+
+  font-family: Verdana, sans-serif;
+  color: white;
+  background: #1ac6d0;
+  cursor: pointer;
+}
+
+.box img{
+  width: 100%;
+  height: auto;
+}
+@supports(object-fit: cover){
+    .box img{
+      height: 100%;
+      object-fit: cover;
+      object-position: center center;
+    }
+}
+
+
+        </style>
+
+
+    </head>
+
+    <body>
+
+        <div class="doc">
+            <div class="box">
+                <img src="https://nestordominguez.com/wp-content/uploads/2017/10/dinosaurios-grande.jpg" alt="Image did not load...">
+            </div>
+            <button class="btn">Change size</button>
+        </div>
+
+
+
+
+        <script>
+            var btn = document.querySelector('.btn');
+var box = document.querySelector('.box')
+btn.addEventListener('click', function(){
+  box.style.width = ( 100 + Math.round(Math.random()*300) ) + 'px';
+  box.style.height = ( 100 + Math.round(Math.random()*300) ) + 'px';
+});
+
+        </script>
+
+
+
+    </body>
+
+
+</html>
